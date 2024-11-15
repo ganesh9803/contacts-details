@@ -12,7 +12,7 @@ const ViewContactDetails = ({ contact, onClose }) => {
           <strong>Email:</strong> {contact.email}
         </div>
         <div className="mb-4">
-          <strong>Phone:</strong> {contact.mobile}
+          <strong>mobile:</strong> {contact.mobile}
         </div>
         <div className="mb-4">
           <strong>Address:</strong> {contact.address || 'N/A'}

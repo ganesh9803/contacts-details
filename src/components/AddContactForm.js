@@ -5,7 +5,7 @@ const AddContactForm = ({ onAddContact, onClose }) => {
     id: Date.now(),
     name: '',
     email: '',
-    phone: '',
+    mobile: '',
     address: '',
   });
 
@@ -16,9 +16,9 @@ const AddContactForm = ({ onAddContact, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (contact.name && contact.email && contact.phone && contact.address) {
+    if (contact.name && contact.email && contact.mobile && contact.address) {
       onAddContact(contact);
-      setContact({ id: Date.now(), name: '', email: '', phone: '', address: '' });
+      setContact({ id: Date.now(), name: '', email: '', mobile: '', address: '' });
     } else {
       alert('Please fill all fields!');
     }
@@ -51,11 +51,11 @@ const AddContactForm = ({ onAddContact, onClose }) => {
           />
         </div>
         <div className="mb-4">
-          <label>Phone</label>
+          <label>mobile</label>
           <input
             type="tel"
-            name="phone"
-            value={contact.phone}
+            name="mobile"
+            value={contact.mobile}
             onChange={handleChange}
             className="w-full p-2 border rounded-lg"
             required

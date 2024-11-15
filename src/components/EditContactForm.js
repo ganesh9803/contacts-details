@@ -4,7 +4,7 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
   const [formData, setFormData] = useState({
     name: contact.name,
     email: contact.email,
-    phone: contact.phone,  // Corrected field name
+    phone: contact.mobile,  
     address: contact.address || '',
   });
 
@@ -13,7 +13,7 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
     setFormData({
       name: contact.name,
       email: contact.email,
-      phone: contact.phone,  // Corrected field name
+      phone: contact.mobile,  
       address: contact.address || '',
     });
   }, [contact]);
@@ -63,8 +63,8 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
             <label className="block text-sm font-semibold mb-2">Phone</label>
             <input
               type="text"
-              name="phone" // Corrected from 'mobile' to 'phone'
-              value={formData.phone} // Corrected field name
+              name="mobile" 
+              value={formData.mobile} 
               onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded-md"
               required
