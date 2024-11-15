@@ -4,7 +4,7 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
   const [formData, setFormData] = useState({
     name: contact.name,
     email: contact.email,
-    mobile: contact.mobile,
+    phone: contact.phone,  // Corrected field name
     address: contact.address || '',
   });
 
@@ -13,7 +13,7 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
     setFormData({
       name: contact.name,
       email: contact.email,
-      mobile: contact.mobile,
+      phone: contact.phone,  // Corrected field name
       address: contact.address || '',
     });
   }, [contact]);
@@ -29,7 +29,7 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedContact = { ...contact, ...formData };
-    onUpdate(updatedContact);
+    onUpdate(updatedContact); // Passing the updated contact
   };
 
   return (
@@ -63,8 +63,8 @@ const EditContactForm = ({ contact, onUpdate, onClose }) => {
             <label className="block text-sm font-semibold mb-2">Phone</label>
             <input
               type="text"
-              name="mobile"
-              value={formData.mobile}
+              name="phone" // Corrected from 'mobile' to 'phone'
+              value={formData.phone} // Corrected field name
               onChange={handleChange}
               className="w-full p-2 border border-gray-300 rounded-md"
               required

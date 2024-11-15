@@ -72,7 +72,7 @@ const ContactList = () => {
                 {/* Contact Details */}
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-gray-800">{contact.name}</h3>
-                  <p className="text-sm text-gray-600">{contact.mobile}</p>
+                  <p className="text-sm text-gray-600">{contact.phone}</p> {/* Corrected from contact.mobile to contact.phone */}
                 </div>
 
                 {/* Action Icons */}
